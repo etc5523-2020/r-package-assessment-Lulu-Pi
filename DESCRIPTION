@@ -5,10 +5,10 @@ Authors@R:
     person(given = "Lulu",
            family = "Pi",
            role = c("aut", "cre"),
-           email = "lpi2@student.monash.edu"
-Description: Help launching the shiny app with datasets and functions, which helps with basic
-             analysis of COVID-19 daily cases of every province in China, including confirmed cases,
-             Death cases and Recovered cases as of 30 September 2020.  
+           email = "lpi2@student.monash.edu",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Help launching the shiny app with datasets and functions, which helps with basic analysis of COVID-19 daily cases of every province in China, 
+  including confirmed cases, Death cases and Recovered cases as of 30 September 2020.  
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
