@@ -1,7 +1,6 @@
 ---
 output: github_document
 always_allow_html: true
-
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -70,15 +69,18 @@ China_covid19 %>%
 ### COVID19 daily cases trend in China
 ```{r line_example, echo = FALSE, warning = FALSE, message=FALSE}
 China_covid19 %>% 
+  filter(`Province/State` %in% c("Shanghai", "Beijing", "Guangdong")) %>%
   pivot_longer(cols = c("Confirmed",
                       "Deaths",
                       "Recovered"),
              names_to = "Type",
              values_to = "Cases") %>% 
-  group_by(Date, Type) %>% 
+  group_by(Date, Type, `Province/State`) %>% 
   summarise(Cases = sum(Cases, na.rm = TRUE)) %>%
   ggplot(aes(x = Date, y = Cases, color = Type)) +
-  geom_line()
+  geom_line() +
+  facet_wrap(~`Province/State`, ncol = 1) +
+  theme_bw()
   
   
 

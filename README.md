@@ -434,3 +434,4 @@ Hebei
 ### COVID19 daily cases trend in China
 
 <img src="man/figures/README-line_example-1.png" width="100%" />
+
