@@ -13,7 +13,3 @@ A shiny application for COVID-19 cases in China.
 Runs the Shiny app which can help you analyse the daily cases of COVID-19 among all provinces in China,
 including confirmed cases, Death cases and Recovered cases from 22 January 2020 to 30 September 2020.
 }
-\examples{
-launch_app()
-
-}

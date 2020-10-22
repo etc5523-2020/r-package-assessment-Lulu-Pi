@@ -3,9 +3,6 @@
 export(launch_app)
 export(plot_cases_province)
 export(select_provinceInput)
-<<<<<<< HEAD
 import(shiny)
-=======
->>>>>>> 3455826bd939970fdde4ef2d6b6bf356ed4d9bc3
 importFrom(magrittr,"%>%")
 importFrom(stats,reorder)

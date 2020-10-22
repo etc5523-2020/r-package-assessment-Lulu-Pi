@@ -6,10 +6,7 @@
 
 #' @return A shiny application for COVID-19 cases in China.
 #' 
-#' @examples 
-#' launch_app()
-#' 
-#' @import  shiny
+#' @import shiny
 #' 
 #' @export
 #'
