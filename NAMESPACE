@@ -2,5 +2,5 @@
 
 export(plot_cases_province)
 export(select_provinceInput)
-import(ggplot2)
-import(shiny)
+importFrom(magrittr,"%>%")
+importFrom(stats,reorder)

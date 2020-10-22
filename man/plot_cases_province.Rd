@@ -15,7 +15,3 @@ A ggplot bar chart of COVID-19 with \verb{type of cases} in three colors among a
 \description{
 Creates a bar chart to present all types of daily cases in all provinces.
 }
-\examples{
-plot_cases_province(China_type)
-
-}

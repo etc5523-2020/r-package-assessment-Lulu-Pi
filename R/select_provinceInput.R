@@ -6,11 +6,6 @@
 #' 
 #' @return A shiny drop down menu with all provinces in data set.
 #' 
-#' @import shiny
-#' 
-#' @examples 
-#' select_provinceInput(table_China)
-#' 
 #' @export
 #'
 select_provinceInput <- function(data) {
