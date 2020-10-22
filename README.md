@@ -435,4 +435,4 @@ Hebei
 
 ### COVID19 daily cases trend in some provinces or states China
 
-<img src="man/figures/README-line_example-1.png" width="100%" />
+<img src="man/figures/README-line_example-1.png" width="100%" /> 

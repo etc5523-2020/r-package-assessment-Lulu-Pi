@@ -31,3 +31,7 @@ Imports:
     lubridate,
     shiny,
     magrittr
+Suggests: 
+    knitr,
+    glue
+VignetteBuilder: knitr
