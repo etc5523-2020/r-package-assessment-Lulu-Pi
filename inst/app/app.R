@@ -43,9 +43,7 @@ ui <- fluidPage(
   hr(),
   br(),br(),
   sidebarLayout(
-    sidebarPanel(selectInput("Province", "what province do you want to look?",
-                               choices = China_covid19$`Province/State`,
-                             selected = "Anhui"),
+    sidebarPanel(select_provinceInput(China_covid19),
                   radioButtons("Type", "Select",
                                choices = c("Confirmed", "Deaths", "Recovered"),
                                selected = "Confirmed"),
@@ -111,16 +109,7 @@ server <- function(input, output, session) {
   output$province_cases <- renderPlotly({
     province_covid19 <- China_type %>%
       filter(Date == input$Date)
-    g2 <- province_covid19 %>%
-      ggplot(aes(x = reorder(`Province/State`, -Cases), y = Cases, fill = Type)) +
-               geom_bar(stat = "identity", position = "dodge") + 
-               theme_bw() + 
-      theme(plot.title = element_text(size = 20, color = "dark red"),
-            axis.title.x = element_text(size = 15, color = "dark blue"),
-            axis.title.y = element_text(size = 15, color = "dark blue"),
-            axis.text.x = element_text(angle = 90, color = "black"),
-            axis.line = element_line(color = "gray")) +
-     labs(x = "Province", y = "Cases", title = "COVID19 cases per day in China")
+    g2 <- plot_cases_province(province_covid19)
     ggplotly(g2)
 })
   
