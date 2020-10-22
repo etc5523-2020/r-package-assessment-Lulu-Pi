@@ -15,7 +15,3 @@ A shiny drop down menu with all provinces in data set.
 \description{
 Creates selection input in shiny package for users to choose which province they want to check with.
 }
-\examples{
-select_provinceInput(table_China)
-
-}
