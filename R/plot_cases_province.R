@@ -7,6 +7,10 @@
 #' @return A ggplot bar chart of COVID-19 with `type of cases` in three colors among all `provinces` on a specific day.
 #' 
 #' @import ggplot2
+#' 
+#' @examples 
+#' plot_cases_province(China_type)
+#' 
 #' @export
 #'
 plot_cases_province <- function(data) {
