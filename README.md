@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![R build
+status](https://github.com/etc5523-2020/r-package-assessment-Lulu-Pi/workflows/R-CMD-check/badge.svg)](https://github.com/etc5523-2020/r-package-assessment-Lulu-Pi/actions)
 <!-- badges: end -->
 
 The goal of COVID19CHN is to help launching the shiny app with datasets
@@ -431,7 +433,6 @@ Hebei
 
 </table>
 
-### COVID19 daily cases trend in China
+### COVID19 daily cases trend in some provinces or states China
 
 <img src="man/figures/README-line_example-1.png" width="100%" />
-

@@ -27,6 +27,7 @@ library(COVID19CHN)
 # COVID19CHN
 
 <!-- badges: start -->
+[![R build status](https://github.com/etc5523-2020/r-package-assessment-Lulu-Pi/workflows/R-CMD-check/badge.svg)](https://github.com/etc5523-2020/r-package-assessment-Lulu-Pi/actions)
 <!-- badges: end -->
 
 The goal of COVID19CHN is to help launching the shiny app with datasets and functions, which helps with basic analysis of COVID-19 daily cases of every province in China, including confirmed cases, death cases and recovered cases as of 30 September 2020.  
@@ -66,7 +67,7 @@ China_covid19 %>%
 ```
 
 
-### COVID19 daily cases trend in China
+### COVID19 daily cases trend in some provinces or states China
 ```{r line_example, echo = FALSE, warning = FALSE, message=FALSE}
 China_covid19 %>% 
   filter(`Province/State` %in% c("Shanghai", "Beijing", "Guangdong")) %>%
