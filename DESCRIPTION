@@ -31,7 +31,10 @@ Imports:
     lubridate,
     shiny,
     magrittr
+<<<<<<< HEAD
 Suggests: 
     knitr,
     glue
 VignetteBuilder: knitr
+=======
+>>>>>>> 3455826bd939970fdde4ef2d6b6bf356ed4d9bc3
