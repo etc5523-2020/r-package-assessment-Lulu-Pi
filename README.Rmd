@@ -1,5 +1,7 @@
 ---
 output: github_document
+always_allow_html: true
+
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -11,6 +13,16 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+library(rmarkdown)
+library(readr)
+library(tidyverse)
+library(lubridate)
+library(ggplot2)
+library(hrbrthemes)
+library(plotly)
+library(gridExtra)
+library(dplyr)
+library(COVID19CHN)
 ```
 
 # COVID19CHN
@@ -18,7 +30,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of COVID19CHN is to help launching the shiny app with datasets and functions, which helps with basic analysis of COVID-19 daily cases of every province in China, including confirmed cases, Death cases and Recovered cases as of 30 September 2020.  
+The goal of COVID19CHN is to help launching the shiny app with datasets and functions, which helps with basic analysis of COVID-19 daily cases of every province in China, including confirmed cases, death cases and recovered cases as of 30 September 2020.  
 
 ## Installation
 
@@ -31,11 +43,45 @@ devtools::install_github("etc5523-2020/r-package-assessment-Lulu-Pi")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you what the package includes: 
 
-```{r example}
-#library(COVID19CHN)
-## basic example code
+### The dataset of COVID-19 daily cases in each province in China
+```{r tibble, echo = FALSE, warning = FALSE, message=FALSE}
+library(tibble)
+tibble(China_covid19)
+```
+
+### The COVID-19 cases per month from January in China
+```{r example, echo = FALSE, warning = FALSE, message=FALSE}
+library(kableExtra)
+China_covid19 %>%
+  select(-Lat, -Long, -Date) %>%
+  group_by(Month,
+          `Province/State`) %>%
+  summarise(Confirmed = sum(Confirmed),
+            Deaths = sum(Deaths),
+            Recovered = sum(Recovered, na.rm = TRUE)) %>%
+  head(10) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+
+### COVID19 daily cases trend in China
+```{r line_example, echo = FALSE, warning = FALSE, message=FALSE}
+China_covid19 %>% 
+  pivot_longer(cols = c("Confirmed",
+                      "Deaths",
+                      "Recovered"),
+             names_to = "Type",
+             values_to = "Cases") %>% 
+  group_by(Date, Type) %>% 
+  summarise(Cases = sum(Cases, na.rm = TRUE)) %>%
+  ggplot(aes(x = Date, y = Cases, color = Type)) +
+  geom_line()
+  
+  
+
 ```
  
 
