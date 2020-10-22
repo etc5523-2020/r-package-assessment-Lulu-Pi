@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The situation of Coronavirus Cases in China — China_covid19 • COVID19CHN</title>
+<title>Launch the shiny app for COVID-19 in China. — launch_app • COVID19CHN</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,9 @@
 
 
 
-<meta property="og:title" content="The situation of Coronavirus Cases in China — China_covid19" />
-<meta property="og:description" content="This dataset contains the daily cases of covid-19 with all provinces in China from 1/22/2020 to 9/30/2020,
-including Confirmed, Deaths and Recovered cases." />
+<meta property="og:title" content="Launch the shiny app for COVID-19 in China. — launch_app" />
+<meta property="og:description" content="Runs the Shiny app which can help you analyse the daily cases of COVID-19 among all provinces in China,
+including confirmed cases, Death cases and Recovered cases from 22 January 2020 to 30 September 2020." />
 
 
 
@@ -121,35 +121,22 @@ including Confirmed, Deaths and Recovered cases." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>The situation of Coronavirus Cases in China</h1>
-    <small class="dont-index">Source: <a href='https://github.com/etc5523-2020/r-package-assessment-Lulu-Pi/blob/master/R/China_covid19.R'><code>R/China_covid19.R</code></a></small>
-    <div class="hidden name"><code>China_covid19.Rd</code></div>
+    <h1>Launch the shiny app for COVID-19 in China.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/etc5523-2020/r-package-assessment-Lulu-Pi/blob/master/R/launch_app.R'><code>R/launch_app.R</code></a></small>
+    <div class="hidden name"><code>launch_app.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>This dataset contains the daily cases of covid-19 with all provinces in China from 1/22/2020 to 9/30/2020,
-including Confirmed, Deaths and Recovered cases.</p>
+    <p>Runs the Shiny app which can help you analyse the daily cases of COVID-19 among all provinces in China,
+including confirmed cases, Death cases and Recovered cases from 22 January 2020 to 30 September 2020.</p>
     </div>
 
-    <pre class="usage"><span class='va'>China_covid19</span></pre>
+    <pre class="usage"><span class='fu'>launch_app</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>the data set contains 8349 observations and 8 variables.</p><ul>
-<li><p><strong>Province/Stage</strong>: The province of state in China</p></li>
-<li><p><strong>Lat</strong>: The latitude point of the province or state</p></li>
-<li><p><strong>Long</strong>: The longitude point of the province or state</p></li>
-<li><p><strong>Date</strong>: The date in formate of y/m/d</p></li>
-<li><p><strong>Confirmed</strong>: Daily confirmed cases</p></li>
-<li><p><strong>Deaths</strong>: Daily deaths cases</p></li>
-<li><p><strong>Recovered</strong>: Daily recovered cases</p></li>
-<li><p><strong>Month</strong>: The month of the day</p></li>
-</ul>
-
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
-
-    <p><a href='https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases'>HDX</a></p>
+    <p>A shiny application for COVID-19 cases in China.</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
