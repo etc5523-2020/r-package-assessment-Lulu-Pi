@@ -17,6 +17,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message=FALSE,
 
 ```{r setup, echo=TRUE}
 library(COVID19CHN)
+library(rmarkdown)
 ```
 
 
