@@ -1,0 +1,5 @@
+China_covid19           The situation of Coronavirus Cases in China
+launch_app              Launch the shiny app for COVID-19 in China.
+plot_cases_province     Plot the bar chart of all the provinces with
+                        daily cases in a dateset
+select_provinceInput    Selection of provinces for users in app
