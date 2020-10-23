@@ -30,7 +30,8 @@ Imports:
     gridExtra,
     lubridate,
     shiny,
-    magrittr
+    magrittr,
+    tidyr
 Suggests: 
     knitr,
     glue,
