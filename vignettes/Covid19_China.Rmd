@@ -8,16 +8,14 @@ vignette: >
 ---
 
 ```{r, include = FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message=FALSE,
+knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
-  out.width = "100%"
+  comment = "#>"
 )
 ```
 
-```{r setup, echo=TRUE}
+```{r setup}
 library(COVID19CHN)
-library(rmarkdown)
 ```
 
 
@@ -27,14 +25,14 @@ This package provides the **China_covid19** dataset, which contains the daily ca
 
 Firstly, you shoud install the package of `COVID19CHN` from [GitHub](https://github.com/) with:
 
-```{r, echo=TRUE, eval = FALSE}
+```{r, eval = FALSE}
 # install.packages("devtools")
 devtools::install_github("etc5523-2020/r-package-assessment-Lulu-Pi")
 ```
 
 After that you could launch the app from the `COVID19CHN` package with:
 
-```{r, echo=TRUE, eval=FALSE}
+```{r, eval=FALSE}
 launch_app()
 ```
 
@@ -53,7 +51,7 @@ The **Shiny App** is used to analyse the daily cases of COVID-19 among all 33 pr
 
 The provinces contain in the app were:
 
-```{r}
+```{r echo = FALSE, warning = FALSE, message=FALSE}
 library(glue)
 glue_collapse(unique(China_covid19$`Province/State`), sep = ", ", last = " and ")
 ```
