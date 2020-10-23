@@ -33,6 +33,6 @@ Imports:
     magrittr
 Suggests: 
     knitr,
-    glue
+    glue,
+    testthat
 VignetteBuilder: knitr
-
