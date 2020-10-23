@@ -1,0 +1,69 @@
+---
+title: "Daily Covid-19 Cases in China"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Daily Covid-19 Cases in China}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(COVID19CHN)
+```
+
+
+This package provides the **China_covid19** dataset, which contains the daily cases of covid-19 China. The package also help you to launch the shiny app for you to analyse the situation of daily cases with all types including confirmed, deaths and recovered cases in China. 
+
+## How to launch the app 
+
+Firstly, you shoud install the package of `COVID19CHN` from [GitHub](https://github.com/) with:
+
+```{r, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("etc5523-2020/r-package-assessment-Lulu-Pi")
+```
+
+After that you could launch the app from the `COVID19CHN` package with:
+
+```{r, eval=FALSE}
+launch_app()
+```
+
+## Introduction of the shiny app
+
+The **Shiny App** is used to analyse the daily cases of COVID-19 among all 33 provinces in China, with **confirmed cases, Death cases and Recovered cases** from 22 January 2020 to 30 September 2020. In order to run this app, you should install the packages below according to the session_info(). The following packages were used:
+
+- **shiny**
+- **rmarkdown**
+- **readr**
+- **tidyverse**
+- **lubridate**
+- **ggplot2**
+- **plotly**
+- **dplyr**
+
+The provinces contain in the app were:
+
+```{r echo = FALSE, warning = FALSE, message=FALSE}
+library(glue)
+glue_collapse(unique(China_covid19$`Province/State`), sep = ", ", last = " and ")
+```
+
+
+## Guidelines for the use of app
+
+You can select any *province* that you want to check with from the select roll, and the **type of cases** on the ratio buttons, the figure would present the trend of the daily cases from the province you select since 22 January to 30 September 2020, the plotly label would show you the specific information when you click the point on the figure. 
+
+You can obtain a table of **Confirmed cases, Deaths cases and Recovered cases** in each **province** in China on a specific *Date* that you can choose in the select-date column. There are multiple methods for you to find the results you are looking for, for example, you can simply search **Hubei** by typing in the blank column, then only the cases on that day in Hubei would appear in the table; or you can enter a number such as **5**, then all the provinces with the cases greater than five would appear in the table. 
+
+After you choosing the specific *date* within the range, the second plotly figure would show up automatically next to the table, with those **type of cases** in three colors among all **provinces** on that day. Same as before, if you click the bar on the figure, the plotly label would show you the information with the number of cases. 
+
+Therefore, this **Shiny App** could help you analyse with the data of **daily cases** in each **province** with a clealy trend and label during the most serious period in China, and help you compare the cases of **Confirmed, Deaths and Recovered** with all **provinces** in China on a same date. By 29 January, the virus spread to all provinces of mainland China from Hubei. All provinces of mainland China initiated the highest response level to public health emergency. Hubei was the most serious province, however, the virus was controlled by the quickly responses of government and all the health workers who are on the frontlines in the battle against COVID-19, the situation was better since April.
+
